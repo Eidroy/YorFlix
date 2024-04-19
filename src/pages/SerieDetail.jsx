@@ -29,7 +29,7 @@ function SerieDetail() {
   const posterUrl = `https://image.tmdb.org/t/p/w500${serie.poster_path}`;
 
   return (
-    <div>
+    <div className="Details">
       <h1>{serie.name}</h1>
       <img src={posterUrl} alt={serie.name} />
       <p>First Air Date: {serie.first_air_date}</p>

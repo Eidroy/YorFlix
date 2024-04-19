@@ -29,7 +29,7 @@ function MovieDetail() {
   const posterUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
 
   return (
-    <div>
+    <div className="Details">
       <h1>{movie.title}</h1>
       <img src={posterUrl} alt={movie.title} />
       <p>Release Year: {movie.release_date}</p>
