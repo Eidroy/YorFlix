@@ -77,23 +77,26 @@ body {
 /* Movie list */
 .Movielist {
   display: flex;
+  justify-content: space-around;
   gap: 25px;
   flex-wrap: wrap;
 }
 
 .movie-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
-  text-align: center;
-  width: 250px;
   margin-bottom: 20px;
   border: 1px solid #ddd;
   border-radius: 5px;
   overflow: hidden;
-
+  width: 750px;
+  height: 300px;
+  text-align: center;
+  align-items: center;
   img {
-    width: 100%;
+    width: 25%;
+    height: 100%;
     object-fit: fill;
   }
 
@@ -113,6 +116,7 @@ body {
     background-color: #333;
     color: white;
     cursor: pointer;
+    margin: 15px;
   }
 
   button:hover {
@@ -123,23 +127,27 @@ body {
 /* Serie list */
 .Serielist {
   display: flex;
+  justify-content: space-around;
   gap: 25px;
   flex-wrap: wrap;
 }
 
 .serie-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
-  text-align: center;
-  width: 250px;
   margin-bottom: 20px;
   border: 1px solid #ddd;
   border-radius: 5px;
   overflow: hidden;
+  width: 750px;
+  height: 300px;
+  text-align: center;
+  align-items: center;
 
   img {
-    width: 100%;
+    width: 30%;
+    height: 100%;
     object-fit: fill;
   }
 
@@ -159,6 +167,7 @@ body {
     background-color: #333;
     color: white;
     cursor: pointer;
+    margin: 15px;
   }
 
   button:hover {
