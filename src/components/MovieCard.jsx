@@ -7,12 +7,14 @@ const MovieCard = ({ movie }) => {
   return (
     <div className="movie-card">
       <img src={imageUrl} alt={movie.title} />
-      <h2>{movie.title}</h2>
-      <p className="desc">Description: {movie.overview}</p>
-      <p className="year">Release Year: {movie.release_date}</p>
-      <Link to={`/movie/${movie.id}`}>
-        <button>Go to Movie Details</button>
-      </Link>
+      <div className="movie-card-right">
+        <h2>{movie.title}</h2>
+        <p className="desc">Description: {movie.overview}</p>
+        <p className="year">Release Year: {movie.release_date}</p>
+        <Link to={`/movie/${movie.id}`}>
+          <button>Go to Movie Details</button>
+        </Link>
+      </div>
     </div>
   );
 };
