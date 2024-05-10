@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const SerieCard = ({ serie }) => {
   const imageUrl = `https://image.tmdb.org/t/p/w500${serie.poster_path}`;
-  // reduce the description to avoid overflow issue
+  // reduce description to avoid overflow issue
   const maxWords = 80;
   let description = serie.overview.split(" ");
 
@@ -18,9 +18,11 @@ const SerieCard = ({ serie }) => {
       <img src={imageUrl} alt={serie.original_name} />
       <div className="serie-card-right">
         <h2>{serie.original_name}</h2>
-        <p className="desc">Description: {description}</p>
+        <p className="desc">
+          Description: {!description ? "Not available yet!" : description}
+        </p>
         <p className="year">Release Year: {serie.first_air_date}</p>
-        <Link to={`/tv/${serie.id}`}>
+        <Link to={!description ? `/*` : `/tv/${serie.id}`}>
           <button>Go to Show Details</button>
         </Link>
       </div>

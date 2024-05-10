@@ -30,11 +30,15 @@ function SerieDetail() {
 
   return (
     <div className="Details">
-      <h1>{serie.name}</h1>
-      <img src={posterUrl} alt={serie.name} />
-      <p>First Air Date: {serie.first_air_date}</p>
-      <p>Rating: {serie.vote_average}</p>
-      <p>Overview: {serie.overview}</p>
+      <div className="details-img">
+        <img src={posterUrl} alt={serie.name} />
+      </div>
+      <div className="details-infos">
+        <h1>{serie.name}</h1>
+        <p>First Air Date: {serie.first_air_date}</p>
+        <p>Rating: {serie.vote_average}</p>
+        <p>Overview: {serie.overview}</p>
+      </div>
     </div>
   );
 }

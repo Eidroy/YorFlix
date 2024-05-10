@@ -30,11 +30,15 @@ function MovieDetail() {
 
   return (
     <div className="Details">
-      <h1>{movie.title}</h1>
-      <img src={posterUrl} alt={movie.title} />
-      <p>Release Year: {movie.release_date}</p>
-      <p>Rating: {movie.vote_average}</p>
-      <p>Overview: {movie.overview}</p>
+      <div className="details-img">
+        <img src={posterUrl} alt={movie.title} />
+      </div>
+      <div className="details-infos">
+        <h1>{movie.title}</h1>
+        <p>Release Year: {movie.release_date}</p>
+        <p>Rating: {movie.vote_average}</p>
+        <p>Overview: {movie.overview}</p>
+      </div>
     </div>
   );
 }

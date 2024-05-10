@@ -35,6 +35,7 @@ body {
 
 /* Header */
 .header {
+  z-index: 1;
   position: fixed;
   display: flex;
   justify-content: space-around;
@@ -83,7 +84,7 @@ body {
 }
 
 .movie-card {
-  box-shadow: 0px 0px 30px #ddd;
+  box-shadow: 0px 0px 20px #ddd;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -124,6 +125,12 @@ body {
   }
 }
 
+.movie-card:hover {
+  box-shadow: 0px 0px 20px rgb(221, 221, 221, 0.625);
+  transition: 0.5s ease;
+  transform: translateX(75px);
+}
+
 /* Serie list */
 .Serielist {
   display: flex;
@@ -133,7 +140,7 @@ body {
 }
 
 .serie-card {
-  box-shadow: 0px 0px 30px #ddd;
+  box-shadow: 0px 0px 20px #ddd;
   display: flex;
   flex-direction: row;
   margin-bottom: 20px;
@@ -265,8 +272,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
-  margin-left: 40vw;
 
   h1 {
     margin-bottom: 20px;
@@ -333,16 +338,36 @@ body {
 
 .Details {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  padding-top: 25px;
+  padding: 25px 120px;
+  height: 75vh;
   text-align: center;
 
-  h1 {
-    margin-bottom: 20px;
+  .details-img {
+    height: 100%;
+    width: 25vw;
+    border-radius: 5px;
+    overflow: hidden;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
   }
-  p {
-    margin-bottom: 20px;
-    width: 50vw;
+
+  .details-infos {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 25px;
+    h1 {
+      margin-bottom: 20px;
+    }
+    p {
+      margin-bottom: 20px;
+      width: 50vw;
+    }
   }
 }
